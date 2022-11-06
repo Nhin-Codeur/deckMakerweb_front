@@ -1,0 +1,23 @@
+.page {
+    display: flex;
+    flex-direction: row;
+}
+
+.card {
+    width: 100px;  
+}
+
+.all_cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card_in_deck {
+    width: 100%;
+    
+}
+
+.card_container {
+    width: 100px;
+}
