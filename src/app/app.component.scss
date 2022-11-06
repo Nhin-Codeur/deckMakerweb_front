@@ -13,11 +13,15 @@
     width: 100%;
 }
 
-.card_in_deck {
-    width: 100%;
+.card_in_deck {    
+    width: 141px;
+    height: 23px;
+    margin-left: -41px;
     
 }
 
 .card_container {
+    overflow: hidden;
     width: 100px;
+    height: 23px;
 }
