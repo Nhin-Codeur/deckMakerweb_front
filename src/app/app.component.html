@@ -1,15 +1,28 @@
 <p> {{ name }} </p>
-<button (click)="searchCard()"> +1</button>
 <input type="text" [(ngModel)]="current_card"/> 
+<button (click)="searchCard()"> Recherche</button>
 <div class="page">
     <div class="all_cards">
         <div *ngFor="let card of all_results">
             <img class="card" src="{{  card['image']  }}" (click)="addCard(card)">
         </div>
-    </div>
+    </div>  
     <div class="deck">
+        <input type="text" [(ngModel)]="current_deck_name"/>
+        <button (click)="saveDeck()"> Save Deck</button>
+        <div class="card_count">
+            {{ deck.length }}
+        </div>
         <div class="card_container" *ngFor="let card of deck">
             <img class="card_in_deck" src="{{  card['cropImage']  }}" />
+            <span class="nom_crop_image"> 
+                {{ card['name'] }}
+            </span>
+        </div>
+    </div>
+    <div class="all_decks">
+        <div *ngFor="let entire_deck of list_of_decks">
+            <span> {{ entire_deck['name'] }} </span>
         </div>
     </div>
 </div>

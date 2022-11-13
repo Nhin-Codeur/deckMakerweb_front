@@ -1,3 +1,5 @@
+
+
 .page {
     display: flex;
     flex-direction: row;
@@ -24,4 +26,15 @@
     overflow: hidden;
     width: 100px;
     height: 23px;
+    position: relative;
+}
+
+.nom_crop_image {
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    color: white;
+    font-size: 50%;
+    font-weight: bold;
+    
 }
