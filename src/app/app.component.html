@@ -9,7 +9,8 @@
     </div>  
     <div class="deck">
         <input type="text" [(ngModel)]="current_deck_name"/>
-        <button (click)="saveDeck()"> Save Deck</button>
+        <button (click)="saveOrUpdateDeck()"> Save Deck</button>
+        <button (click)="supprimerCurrentdeck()"> Delete Deck </button>
         <div class="card_count">
             {{ deck.length }}
         </div>
@@ -22,7 +23,7 @@
     </div>
     <div class="all_decks">
         <div *ngFor="let entire_deck of list_of_decks">
-            <span> {{ entire_deck['name'] }} </span>
+            <span class="deck_name" (click)="afficheCurrentdeck(entire_deck)"> {{entire_deck['id'] + ' ' + entire_deck['name'] }} </span>
         </div>
     </div>
 </div>
